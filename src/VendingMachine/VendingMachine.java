@@ -56,70 +56,18 @@ public class VendingMachine {
 
     public void insertCoin(Coin coin) {
         currState.insertCoin(coin);
-//        double amountAlreadyInserted = calculateMoneyInserted();
-//        if(dispensable) {
-//            System.out.println("Can't insert more coins.");
-//        }
-//        else if(amountAlreadyInserted + coin.amount() > 1.00) {
-//            System.out.println("Exact change only.");
-//        }
-//        else if(refunding) {
-//            System.out.println("Can't insert coins while refunding in progress.");
-//        }
-//        else {
-//            coins.add(coin);
-//            if(calculateMoneyInserted() == 1.00) {
-//                dispensable = true;
-//            }
-//        }
-
     }
 
     public void refund() {
         currState.refund();
-//        if(refunding) {
-//            System.out.println("Stop mashing the button!");
-//        }
-//        else {
-//            refunding = true;
-//            dispensable = false;
-//            for(Coin coin : coins) {
-//                System.out.println("A " + coin.toString() + " pops out. *clink*");
-//                // realistic simulation!
-//                try {
-//                    wait(refundDelay);
-//                } catch (InterruptedException e) {
-//                    // ignore
-//                }
-//            }
-//            coins.clear();
-//            refunding = false;
-//        }
     }
 
     public void dispenseProduct() {
         currState.dispenseProduct();
-//        if(refunding) {
-//            System.out.println("Can't purchase while refunding!");
-//        }
-//        else if(dispensable) {
-//            System.out.println("Dispensing delicious goodies!");
-//            coins.clear();
-//            dispensable = false;
-//        }
-//        else {
-//            System.out.println("Insufficient funds!");
-//        }
+
     }
 
-//    private double calculateMoneyInserted() {
-//        double amount = 0.0;
-//
-//        for(Coin coin : coins) {
-//            amount += coin.amount();
-//        }
-//        return amount;
-//    }
+
 
     public void setCurrState(String state) {
         currState = states.get(state);
