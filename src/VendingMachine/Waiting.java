@@ -1,6 +1,8 @@
 
 package VendingMachine;
-
+/**
+* @author Alex Hurley
+*/
 import java.util.List;
 
 public class Waiting implements State {
